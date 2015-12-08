@@ -1,0 +1,27 @@
+{
+  "name": "react-shared-library-example",
+  "version": "0.0.1",
+  "description": "Example of how to implement shared library of react components that can be used across multiple projects.",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "copy-assests": "cp -R ./src ./dist",
+    "build-modules": "babel ./src --optional runtime --out-dir ./dist --source-maps",
+    "build": "npm run clean && npm run copy-assests && npm run build-modules"
+  },
+  "dependencies": {
+    "react": "~0.14.0"
+  },
+  "devDependencies": {
+    "babel": "~5.8.29",
+    "babel-core": "~5.8.33"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "keywords": [
+    "react.js",
+    "babel",
+    "shared components"
+  ],
+  "license": "MIT"
+}
